@@ -2,15 +2,15 @@
 
 with tripdata as 
 (
-  select *, right(dispatching_base_num,5) as dispatching_base_num_int,
+  select *,
     row_number() over(partition by dispatching_base_num, pickup_datetime) as rn
   from {{ source('staging','fhv_tripdata') }}
   where dispatching_base_num is not null 
 )
 select
     -- identifiers
-    {{ dbt_utils.surrogate_key(['dispatching_base_num_int', 'pickup_datetime']) }} as tripid,
-    cast(dispatching_base_num_int as integer) as dispatching_base_num,
+    {{ dbt_utils.surrogate_key(['dispatching_base_num', 'pickup_datetime']) }} as tripid,
+    dispatching_base_num,
     cast(PULocationID as integer) as PULocationID,
     cast(DOLocationID as integer) as DOLocationID,
     
