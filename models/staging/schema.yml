@@ -203,7 +203,4 @@ models:
           - name: Total_amount 
             description: The total amount charged to passengers. Does not include cash tips.
 
-
-
-models:
     - name: stg_fhv_tripdata
