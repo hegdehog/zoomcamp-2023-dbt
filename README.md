@@ -1,1 +1,2 @@
-Project setup and exercies on my [repository](https://github.com/hegdehog/data-engineering-zoomcamp-2023/tree/main/week_4_analytics_engineering)
+- Project setup and exercies on my [repository](https://github.com/hegdehog/data-engineering-zoomcamp-2023/tree/main/week_4_analytics_engineering)
+- My custom [Google Data Studio report](https://lookerstudio.google.com/reporting/04a71f2d-1485-415a-bd27-218e5ce9fff7)
